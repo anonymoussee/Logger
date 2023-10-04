@@ -22,12 +22,12 @@ All baselines we used are reimplemented in the folder `./Baselines.`
 We have packaged all the static analysis related Java code with all required dependencies into JARs for reproduction, you can refer these Jars in folder `./Build`.
 
 ### Code Slicing
-Instruction for running the callgraph generators
+Instruction for running the callgraph generators:
 
 ```bash
 java -jar javacg-0.1-SNAPSHOT-static.jar project1.jar ... > cg.txt
 ```
-Instruction for generate code slice
+Instruction for generate code slice:
 
 ```python
 python generate_code_slice.py --cg cg.txt
@@ -37,13 +37,13 @@ python generate_code_slice.py --cg cg.txt
 
 ### Log Slicing
 
-Instruction for pruning log-related call graphs
+Instruction for pruning log-related call graphs:
 
 ```bash
 python generate_log_methods.py --cg cg.txt --output log_methods.csv --matcher 'log'
 ```
 
-Instruction for getting log paths.
+Instruction for getting log paths:
 
 ```bash
 java -jar LogEPGen.jar -j input_jar.jar -l log_methods.txt -o log_file.json
