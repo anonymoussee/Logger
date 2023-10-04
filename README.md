@@ -19,7 +19,7 @@ Please download the processed datasets from [ProjectsSRC](https://drive.google.c
 All baselines we used are reimplemented in the folder `./Baselines.`
 
 ## Static Analysis Part
-
+We have packaged all the static analysis related Java code with all required dependencies into JARs for reproduction, you can refer these Jars in folder `./Build`.
 
 ### Code Slicing
 Instruction for running the callgraph generators
