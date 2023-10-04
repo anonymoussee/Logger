@@ -2,7 +2,7 @@
 
 This is the anonymous replication package for the FSE2024 submission "Go Static: Contextualized Logging Statement Generation". In this paper, we propose SCLogger, the first  logging statement generation approach powered by inter-method static contexts.
 
-SCLogger consists of two four phases: static scope extension, logging style adaption, contextulized prompt construction, logging variable refinement.
+SCLogger consists of four phases: static scope extension, logging style adaption, contextulized prompt construction, logging variable refinement.
 
 We will maintain this open source tool once the paper get accepted and continue improve the tool for further practical application.
 
