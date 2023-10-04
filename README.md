@@ -25,7 +25,7 @@ We have packaged all the static analysis related Java code with all required dep
 Instruction for running the callgraph generators
 
 ```bash
-java -jar javacg-0.1-SNAPSHOT-static.jar lib1.jar ... > cg.txt
+java -jar javacg-0.1-SNAPSHOT-static.jar project1.jar ... > cg.txt
 ```
 ```python
 python generate_code_slice.py --cg cg.txt
