@@ -1,0 +1,79 @@
+# this is the lance locator
+import os
+import re
+import difflib
+import javalang
+
+def delete_comments(java_files_dir,new_files_dir):
+    print("Start delete comments!")
+
+    if not os.path.exists(new_files_dir):
+        os.makedirs(new_files_dir)
+
+    for file_name in os.listdir(java_files_dir):
+        if file_name.endswith('.java'):
+            file_path = os.path.join(java_files_dir, file_name)
+
+            with open(file_path, 'r', encoding='utf-8') as f:
+                file_content = f.read()
+
+            single_line_comment_pattern = r'\s*//.*?$'
+            file_content = re.sub(single_line_comment_pattern, '', file_content, flags=re.MULTILINE)
+
+            multi_line_comment_pattern = r'\s*/\*.*?\*/'
+            file_content = re.sub(multi_line_comment_pattern, '', file_content, flags=re.DOTALL)
+
+            file_content = file_content.strip()
+
+            new_file_path = os.path.join(new_files_dir, file_name)
+
+            with open(new_file_path, 'w', encoding='utf-8') as f:
+                f.write(file_content)
+    print("End delete comments!")
+
+
+dataset_name = "wicket"
+
+w_ls_path = f"archive/dataset/logmethod/{dataset_name}_w_ls"
+wo_ls_path = f"archive/dataset/logmethod/{dataset_name}_wo_ls"
+ground_truth_path = f"archive/dataset/logmethod/{dataset_name}_gt.txt"
+output_list_path = f"archive/dataset/lance_input/{dataset_name}_list.txt"
+output_path = f"archive/dataset/lance_output/{dataset_name}_denoising_pred.txt"
+
+with open(output_list_path,"r",encoding='utf-8') as f:
+    output_list = f.readlines()
+output_list = [x.replace("\n","") for x in output_list]
+with open(output_path,"r",encoding='utf-8') as f:
+    output = f.readlines()
+
+with open(ground_truth_path,"r",encoding='utf-8') as f:
+    lines = f.readlines()
+
+
+count = 0
+for line in lines:
+    splitted = line.split(":",maxsplit=2)
+    file_name = splitted[0]
+    content = splitted[2].replace(" ","").replace("\n","")
+
+    with open(os.path.join(w_ls_path,file_name),"r",encoding='utf-8') as f:
+        file_content = f.read()
+    file_content = file_content.replace(" ","").replace("\n","")
+
+    change_index_gt = file_content.find(content)
+
+    output_content = output[output_list.index(file_name)].replace(" ","").replace("\n","")
+    with open(os.path.join(wo_ls_path,file_name),"r",encoding='utf-8') as f:
+        wo_content = f.read()
+    wo_content = wo_content.replace(" ","").replace("\n","")
+
+    first_different_index = -1
+    for i, (char1, char2) in enumerate(zip(wo_content, output_content)):
+        if char1 != char2:
+            first_different_index = i
+            break
+
+    if abs(first_different_index - change_index_gt)<5:
+        count+=1
+
+print(f"ACC:{count/len(lines)}")
