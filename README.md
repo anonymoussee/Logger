@@ -50,7 +50,7 @@ java -jar LogEPGen.jar -j input_jar.jar -l log_methods.txt -o log_file.json
 Instruction for the generate and slice log graphs:
 
 ```bash
-python log_slice_generator.py --call-graph-file cg.txt --log-file log_file.json --method target_method_signature --output-path ./prompts --hop 2
+python generate_log_slice.py --call-graph-file cg.txt --log-file log_file.json --method target_method_signature --output-path ./prompts --hop 2
 ```
 
 
