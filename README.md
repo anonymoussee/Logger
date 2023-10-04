@@ -12,11 +12,11 @@ We will maintain this open source tool once the paper get accepted and continue 
 
 ## Datasets
 
-Please download the processed datasets from [ProjectsSRC](https://drive.google.com/file/d/13f1qzi3Il5LHdeIiE7jw1cZTXo5PSwF_/view?usp=sharing), [ProcessedDatasets](https://drive.google.com/file/d/1sKaj_Bn1xYtACHQk2j7tIAQr5bGabBdw/view?usp=sharing) and then unzip these datasets into the directory of `ProjectsSRC` and `ProcessedDatasets`.
+Please download the processed datasets from [ProjectsSRC](https://drive.google.com/file/d/13f1qzi3Il5LHdeIiE7jw1cZTXo5PSwF_/view?usp=sharing), [ProcessedDatasets](https://drive.google.com/file/d/1sKaj_Bn1xYtACHQk2j7tIAQr5bGabBdw/view?usp=sharing) and then unzip these datasets into the directory of `./ProjectsSRC` and `./ProcessedDatasets`.
 
 ## Baselines
 
-All baselines we used are reimplemented in the folder `Baselines.`
+All baselines we used are reimplemented in the folder `./Baselines.`
 
 ## Static Analysis Part
 
