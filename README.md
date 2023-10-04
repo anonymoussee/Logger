@@ -61,3 +61,4 @@ python generate_log_slice.py --call-graph-file cg.txt --log-file log_file.json -
 
 
 ## Prompt Generation
+We offer one-click execution script for all componenets and can generate corresponding prompts for given target method.
