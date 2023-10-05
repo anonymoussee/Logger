@@ -30,8 +30,7 @@ java -jar javacg-0.1-SNAPSHOT-static.jar project1.jar ... > cg.txt
 Instruction for generate code slice:
 
 ```python
-python generate_code_slice.py --cg cg.txt
- --src ./ProjectSrc/Project --method target_method_signature  --output output.txt
+java -jar CodeSlicer.jar -i inputFilePath -m methodSignature -d projectSrcDir
 ```
 
 
