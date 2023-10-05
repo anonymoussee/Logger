@@ -30,7 +30,7 @@ java -jar javacg-0.1-SNAPSHOT-static.jar project1.jar ... > cg.txt
 Instruction for generate code slice:
 
 ```bash
-java -jar CodeSlicer.jar -i inputFilePath -m methodSignature -d projectSrcDir
+java -jar CodeSlicer.jar -i cg.txt -m methodSignature -d projectSrcDir
 ```
 
 
