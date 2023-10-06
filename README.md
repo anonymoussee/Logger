@@ -62,6 +62,7 @@ java -jar AvaVarList.jar -i inputFilePath -o outputFilePath -m methodName -s src
 ```
 
 ### Variable Refinement
+Instruction for getting detailed variable information:
 ```bash
 java -jar VarRefine.jar -i inputFilePath -o outputFilePath -v variableName -s srcPathsFilePath -c classpathEntriesFilePath
 ```
