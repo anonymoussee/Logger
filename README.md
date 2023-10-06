@@ -56,7 +56,10 @@ python generate_log_slice.py --call-graph-file cg.txt --log-file log_file.json -
 
 
 ### Available Variable List
-
+Instruction for getting available variable list:
+```bash
+java -jar AvaVarList.jar -i inputFilePath -o outputFilePath -m methodName -s srcPathsFilePath -c classpathEntriesFilePath
+```
 
 ### Variable Refinement
 
