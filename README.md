@@ -9,6 +9,53 @@ We will maintain this open source tool once the paper get accepted and continue 
 ![overview](Figure/logger_overview.jpg)
 
 ## Repository Organization
+```bash
+├── Baselines # Baselines
+│   ├── GPT-3.5.py
+│   ├── GPT-4.py
+│   ├── davinci-003.py
+│   ├── lance
+│   │   ├── README.md
+│   │   └── lance.py
+│   ├── lance2
+│   │   └── lance2.py
+│   ├── lance_eva
+│   └── llama2.py
+├── Build
+│   ├── AvaVarList.jar # Available variable list
+│   ├── CodeSlicer.jar  # Code graph and slicing
+│   ├── LogEPGen.jar # Log graph and slicing
+│   ├── LogStatGen.jar # Log graph and slicing
+│   └── VarRefine.jar # Variable refinement
+├── Figure
+│   ├── logger_overview.jpg
+│   └── logger_overview.pdf
+├── README.md
+├── Scripts
+│   ├── demo_case_selection.py
+│   ├── generate_log_slice.py
+│   └── log_methods_generator.py
+├── Src
+│   ├── CodeSlicer # Code graph and slicing
+│   │   ├── Analyzer
+│   │   │   └── util
+│   │   │       └── MethodFinder.java
+│   │   └── CodeSlicer.java
+│   ├── LogGraph # Log graph and slicing
+│   │   ├── LogEPGen.java
+│   │   ├── LogStatGen.java
+│   │   ├── OptionsCfg.java
+│   │   ├── Util
+│   │   │   ... 
+│   │   ├── analyseDepth
+│   │   │  ... # Constraint solving
+│   └── Var
+│       ├── AvaVarList.java # Available variable list
+│       └── VarRefine.java # Variable refinement
+└── ThirdParty
+    ├── javacg-0.1-SNAPSHOT-static.jar
+    └── soot-4.3.0-jar-with-dependencies.jar
+```
 
 ## Datasets
 
