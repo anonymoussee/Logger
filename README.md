@@ -62,7 +62,9 @@ java -jar AvaVarList.jar -i inputFilePath -o outputFilePath -m methodName -s src
 ```
 
 ### Variable Refinement
-
+```bash
+java -jar VarRefine.jar -i inputFilePath -o outputFilePath -v variableName -s srcPathsFilePath -c classpathEntriesFilePath
+```
 
 ## Prompt Generation
 We offer one-click execution script for all componenets and can generate corresponding prompts for given target method.
