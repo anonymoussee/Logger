@@ -35,6 +35,7 @@ We will maintain this open source tool once the paper get accepted and continue 
 │   ├── demo_case_selection.py
 │   ├── generate_log_slice.py
 │   └── log_methods_generator.py
+│   └── run.py
 ├── Src
 │   ├── CodeSlicer # Code graph and slicing
 │   │   ├── Analyzer
