@@ -31,6 +31,7 @@ We will maintain this open source tool once the paper get accepted and continue 
 │   ├── logger_overview.jpg
 │   └── logger_overview.pdf
 ├── README.md
+├── requirements.txt
 ├── Scripts
 │   ├── demo_case_selection.py
 │   ├── generate_log_slice.py
