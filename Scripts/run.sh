@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # Default values for script parameters
+set -e
+set -x
+
 input_file=""
 output_file=""
 method_signature=""
